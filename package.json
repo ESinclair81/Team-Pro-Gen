@@ -1,0 +1,31 @@
+{
+  "name": "team-pro-gen",
+  "version": "1.0.0",
+  "description": "For the command line Team Profile Generator ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ESinclair81/Team-Pro-Gen.git"
+  },
+  "keywords": [
+    "Team",
+    "Profile",
+    "Generator",
+    "Node",
+    "Inquirer",
+    "JEST",
+    "intern",
+    "employee",
+    "manager",
+    "engineer"
+  ],
+  "author": "E Sinclair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ESinclair81/Team-Pro-Gen/issues"
+  },
+  "homepage": "https://github.com/ESinclair81/Team-Pro-Gen#readme"
+}
