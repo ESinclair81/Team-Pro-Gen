@@ -7,3 +7,17 @@ test("Attaches GitHub Username to Engineer through constructor method", () => {
         expect(emp.email).toBe(testGithub);
     });
     
+
+//******************************************  These are the Engineer constructior methods   *******************************************/
+
+test("getRole() should return \"Engineer\"", () => {
+    const testEngineer = "Engineer";
+    const emp = new Manager("Daphne", 1, "test@email.com", testEngineer);
+    expect(emp.getRole()).toBe(testEngineer);
+});
+
+test("getGithub() should return Github", () => {
+    const testGithub= "Github";
+    const emp = new Engineer("Daphne", 1, "test@email.com", testGithub);
+    expect(emp.getGithub()).toBe(testGithub);
+});
