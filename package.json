@@ -4,7 +4,7 @@
   "description": "For the command line Team Profile Generator ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/ESinclair81/Team-Pro-Gen/issues"
   },
-  "homepage": "https://github.com/ESinclair81/Team-Pro-Gen#readme"
+  "homepage": "https://github.com/ESinclair81/Team-Pro-Gen#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
