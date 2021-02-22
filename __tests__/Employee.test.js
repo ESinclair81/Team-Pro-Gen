@@ -2,7 +2,7 @@ const Employee = require('../lib/Employee');
 
 test("Creates an instance of Employee", () => {
     const emp = new Employee();
-    expect(typeof(emp)).toBe("empObject");
+    expect(typeof(emp)).toBe("object");
 });
 
 test("Employee name can be logged using constructor", () => {
@@ -18,11 +18,9 @@ test("Employee id can be logged", () => {
 });
 
 test("Employee email can be logged", () => {
-    const testEmail = "test@email.com";
-    const emp = new Employee("Daphne", testEmail;
+    const testEmail = "email@test.com";
+    const emp = new Employee("Daphne",1, testEmail);
     expect(emp.email).toBe(testEmail);
 });
 
-
-//*+**************************************   These Are the Employee Constructor Methods   *********************************************//
 
