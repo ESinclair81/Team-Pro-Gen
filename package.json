@@ -30,5 +30,10 @@
   "homepage": "https://github.com/ESinclair81/Team-Pro-Gen#readme",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.3.3",
+    "path": "^0.12.7"
   }
 }
