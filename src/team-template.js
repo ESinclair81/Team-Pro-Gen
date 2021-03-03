@@ -78,7 +78,40 @@ const createTeam = team => {
         );
     
         return html.join("");
-            
-
-
 }
+
+//*****************************************   This function generates the Page as HTML  ***********************************************/
+module.exports = team => {
+
+    return `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/c0290c8c1c.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 team-title">
+                <h1 class="text-center">This Is The Squad: My Team"</h1>
+            </div>
+        </div>
+    </div>  
+    <div class="container">
+        <div class="row">
+            <div class="team-area col-12 d-flex justify-content-center">
+                ${createTeam(team)}
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
+    `;
+
+};
