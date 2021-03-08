@@ -59,21 +59,21 @@ const createTeam = team => {
 
     const html = [];
 
-        html.push(team
+        html.push(teamProfiles
             .filter(employee => employee.getRole() === "Manager")
             .map(manager => makeManager(manager))
             .join("")
         );
 
-        html.push(team
+        html.push(teamProfiles
             .filter(employee => employee.getRole() === "Engineer")
             .map(engineer => makeEngineer(engineer))
             .join("")
         );
 
-        html.push(team
+        html.push(teamProfiles
             .filter(employee => employee.getRole() === "Intern")
-            .map(intern => makeINtern(intern))
+            .map(intern => makeIntern(intern))
             .join("")
         );
     
@@ -81,7 +81,7 @@ const createTeam = team => {
 }
 
 //*****************************************   This function generates the Page as HTML  ***********************************************/
-module.exports = team => {
+module.exports = teamProfiles => {
 
     return `
     <!DOCTYPE html>
@@ -106,7 +106,7 @@ module.exports = team => {
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-                ${createTeam(team)}
+                ${createTeam(teamProfiles)}
             </div>
         </div>
     </div>  
