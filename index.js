@@ -9,6 +9,8 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "teamProfiles.html");
 
+const render = require("./src/team-template");
+
 const teamMembers = [];
 const idArray = [];
 
@@ -20,18 +22,18 @@ function teamMenu() {
         {
             type: "input",
             name: "managerName",
-            message: "Please enter the team manager's name.",
+            message: "Please enter the team manager's name",
             validate: answer => {
                 if (answer !== "") {
                     return true;
                 }
-                return "Please enter minimum one character.";
+                return "Please enter minimum one character";
             }
         },
         {
             type: "input",
             name: "managerId",
-            message: "Please enter the manager's ID",
+            message: "Please enter the manager's id",
             validate: answer => {
                 const pass = answer.match(
                     /^[1-9]\d*$/
@@ -45,12 +47,13 @@ function teamMenu() {
         {
             type: "input",
             name: "managerEmail",
+            message: "Please enter the manager's email",
             validate: answer => {
                 const pass = answer.match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    /\S+@\S+\.\S+/
                 );
                 if (pass) {
-                    return re.test(String(email).toLowerCase());
+                    return true;
                 }  
                 return "Please enter a valid email address";
                 }
@@ -59,11 +62,11 @@ function teamMenu() {
             type: "input",
             name: "managerOfficeNum",
             validate: answer => {
-                const isValid = (
+                const pass = answer.match (
                     /^[2-9]\d{2}[2-9]\d{2}\d{4}$/
                 ); 
                 if (pass) {
-                    return isValid; 
+                    return true; 
                 }
                 return "Please enter a valid ten digit phone number";
                 }
@@ -72,10 +75,10 @@ function teamMenu() {
         .then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNum);
             teamMembers.push(manager);
-            idArray.push(answers.manager.Id);
+            idArray.push(answers.managerId);
             createTeam();
         });  
-    }
+    
 //***************************  This function creates the team profile  ********************************/
 function createTeam() {
     
@@ -247,7 +250,7 @@ function buildTeam() {
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
         addManager();
-    
+}
     
     teamMenu();
 
