@@ -78,7 +78,7 @@ function teamMenu() {
             idArray.push(answers.managerId);
             createTeam();
         });  
-    
+    };
 //***************************  This function creates the team profile  ********************************/
 function createTeam() {
     
@@ -241,7 +241,7 @@ function addIntern() {
            idArray.push(answers.internId);
            createTeam();
        });   
-}}
+}
 
 function buildTeam() {
     if (!fs.existsSync(OUTPUT_DIR)) {
