@@ -1,0 +1,35 @@
+body{
+    margin-top:20px;
+    background:#f3f3f3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .employee-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .card-title {
+    color: orange;
+    font-size: 18px;
+  }
+
+  .card-body {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .list-group-item {
+   color: blue
+  }
+ 
