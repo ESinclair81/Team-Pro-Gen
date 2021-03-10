@@ -20,6 +20,7 @@ const createTeam = teamProfiles => {
         </div>
         `;
     };
+
     //********************  This function makes the HTML for the Engineer card  ****************************/
     const makeEngineer = engineer => {
         return `
@@ -45,18 +46,19 @@ const createTeam = teamProfiles => {
         <div class= "card employee-card">
         <div class = "card-header">
             <h2 class="card-title">${intern.getName()}<h2>
-            <h3 class="card-title"><i class= "fas fa-user-graduate mr-2"></i>${manager.getRole()}</h3>
+            <h3 class="card-title"><i class= "fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
         </div>
             <div class ="card-body">
                 <ul class="list-group">
                     <li class="list-group-item">ID: ${intern.getId()}</li>
                     <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}}">${intern.getEmail()}</a></li>
-                    <li class="list-group-item">School: "${intern.getSchool()}"</li>
+                    <li class="list-group-item">School: ${intern.getSchool()}</li>
                 </ul>
             </div>
         </div>
         `;
     };
+
     //****************** These functions filter and push appropriate Employees as Team HTML ***********************/
 
     const html = [];
@@ -68,7 +70,7 @@ const createTeam = teamProfiles => {
 
         html.push(teamProfiles
             .filter(employee => employee.getRole() === "Engineer")
-            .map(engineer => makeEngineer(eng))
+            .map(engineer => makeEngineer(engineer))
             .join("")
         );
 

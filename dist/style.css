@@ -3,6 +3,14 @@ body{
     background:#f3f3f3;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
+
+.container-fluid {
+  background: navy;
+  color: white;
+}
+
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -15,6 +23,7 @@ body{
     max-width: 300px;
     margin: auto;
     text-align: center;
+    color: red;
   }
   
   .card-title {
@@ -33,3 +42,29 @@ body{
    color: blue
   }
  
+
+/* Media Queries */
+
+    @media only screen (min-width: 576px){
+    
+      ...
+      
+      }
+
+    @media only screen (min-width: 768px){
+    
+      ...
+      
+      }
+
+    @media only screen (min-width: 992px){
+  å
+      ...
+      
+      }
+
+    @media only screen (min-width: 1200px){
+
+      ...
+      
+      }
