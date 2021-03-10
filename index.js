@@ -61,6 +61,7 @@ function teamMenu() {
         {
             type: "input",
             name: "managerOfficeNum",
+            message: "Please enter the manager's office number (digits only please)",
             validate: answer => {
                 const pass = answer.match (
                     /^[2-9]\d{2}[2-9]\d{2}\d{4}$/
@@ -226,7 +227,7 @@ function addIntern() {
             {
                 type: "input",
                 name: "internSchool",
-                message: "Please enter the school your intern is from.",
+                message: "Please enter the school your intern is from",
                 validate: answer => {
                     if (answer !== "") {
                     return true;
